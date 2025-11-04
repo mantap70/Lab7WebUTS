@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Informasi Stok Buku</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
+</head>
+<body>
+  <div id="containerStok">
+    <h1>Katalog Buku</h1>
+    <table border="1" width="100%" id="tabelBuku" style="font-size:12px; color:white;">
+      <thead>
+        <tr>
+          <th>Cover</th>
+          <th>Kode</th>
+          <th>Nama Buku</th>
+          <th>Jenis</th>
+          <th>Edisi</th>
+          <th>Stok</th>
+          <th>Harga</th>
+        </tr>
+      </thead>
+      <tbody id="tabelBody"></tbody>
+    </table>
+
+    <h3>Tambah Buku Baru</h3>
+    <input type="text" id="kode" placeholder="Kode Buku"><br>
+    <input type="text" id="nama" placeholder="Nama Buku"><br>
+    <input type="text" id="jenis" placeholder="Jenis"><br>
+    <input type="text" id="edisi" placeholder="Edisi"><br>
+    <input type="number" id="stok" placeholder="Stok"><br>
+    <input type="text" id="harga" placeholder="Harga"><br>
+    <button id="tambahBuku">Tambah</button><br><br>
+    <button onclick="location.href='dashboard.html'">Kembali</button>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script>
+    const tbody = document.getElementById("tabelBody");
+
+    function tampilkanData() {
+      tbody.innerHTML = "";
+      dataKatalogBuku.forEach((buku) => {
+        const row = `
+          <tr>
+            <td><img src="${buku.cover}" alt="${buku.namaBarang}" class="cover"></td>
+            <td>${buku.kodeBarang}</td>
+            <td>${buku.namaBarang}</td>
+            <td>${buku.jenisBarang}</td>
+            <td>${buku.edisi}</td>
+            <td>${buku.stok}</td>
+            <td>${buku.harga}</td>
+          </tr>`;
+        tbody.innerHTML += row;
+      });
+    }
+
+    tampilkanData();
+
+    document.getElementById("tambahBuku").onclick = () => {
+      const bukuBaru = {
+        kodeBarang: document.getElementById("kode").value,
+        namaBarang: document.getElementById("nama").value,
+        jenisBarang: document.getElementById("jenis").value,
+        edisi: document.getElementById("edisi").value,
+        stok: parseInt(document.getElementById("stok").value),
+        harga: document.getElementById("harga").value,
+      };
+
+      if (!bukuBaru.kodeBarang || !bukuBaru.namaBarang) {
+        alert("Kode dan Nama Buku wajib diisi!");
+        return;
+      }
+
+      dataKatalogBuku.push(bukuBaru);
+      tampilkanData();
+      alert("Buku baru berhasil ditambahkan!");
+    };
+  </script>
+</body>
+</html>

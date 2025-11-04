@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pemesanan Buku</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
+</head>
+<body>
+  <div id="containerCheck">
+    <h1>Form Pemesanan Buku</h1>
+    <form id="formPemesanan">
+      <input type="text" id="namaPemesan" placeholder="Nama Pemesan" required><br>
+      <input type="text" id="alamat" placeholder="Alamat Pengiriman" required><br>
+      <input type="text" id="buku" placeholder="Nama Buku" required><br>
+      <input type="number" id="jumlah" placeholder="Jumlah" required><br>
+      <select id="pembayaran">
+        <option value="">Metode Pembayaran</option>
+        <option value="Transfer Bank">Transfer Bank</option>
+        <option value="E-Wallet">E-Wallet</option>
+        <option value="COD">COD</option>
+      </select><br><br>
+      <button type="submit">Pesan Sekarang</button><br>
+      <button type="button" onclick="location.href='dashboard.html'">Kembali</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("formPemesanan").addEventListener("submit", function(e){
+      e.preventDefault();
+      const nama = document.getElementById("namaPemesan").value;
+      const buku = document.getElementById("buku").value;
+      const jumlah = document.getElementById("jumlah").value;
+      const bayar = document.getElementById("pembayaran").value;
+      alert(`Terima kasih ${nama}! Pesanan ${jumlah} buku "${buku}" dengan metode ${bayar} telah diterima.`);
+      this.reset();
+    });
+  </script>
+</body>
+</html>

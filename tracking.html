@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tracking Pengiriman</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
+</head>
+<body>
+  <div id="containerTrack">
+    <h1>Tracking Pengiriman</h1>
+    <input type="text" id="noDO" placeholder="Masukkan Nomor DO"><br>
+    <button id="btnCari">Cari</button><br><br>
+    <div id="hasilTracking"></div>
+    <button onclick="location.href='dashboard.html'">Kembali</button>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script>
+    const hasilDiv = document.getElementById("hasilTracking");
+    document.getElementById("btnCari").onclick = () => {
+      const kode = document.getElementById("noDO").value.trim();
+      const data = dataTracking[kode];
+      if (data) {
+        let perjalananHTML = "";
+        data.perjalanan.forEach((step) => {
+          perjalananHTML += `<li>${step.waktu} - ${step.keterangan}</li>`;
+        });
+        hasilDiv.innerHTML = `
+          <p><b>Nama Pemesan:</b> ${data.nama}</p>
+          <p><b>Status:</b> ${data.status}</p>
+          <p><b>Ekspedisi:</b> ${data.ekspedisi}</p>
+          <p><b>Tanggal Kirim:</b> ${data.tanggalKirim}</p>
+          <p><b>Paket:</b> ${data.paket}</p>
+          <p><b>Total:</b> ${data.total}</p>
+          <h4>Perjalanan Paket:</h4>
+          <ul>${perjalananHTML}</ul>
+        `;
+      } else {
+        hasilDiv.innerHTML = "<p style='color:yellow;'>Nomor DO tidak ditemukan.</p>";
+      }
+    };
+  </script>
+</body>
+</html>

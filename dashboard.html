@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
+</head>
+<body>
+  <div id="container">
+    <h1 id="greeting"></h1>
+    <h3>Menu Utama</h3>
+    <button onclick="location.href='stok.html'">Katalog Buku</button><br />
+    <button onclick="location.href='tracking.html'">Tracking Pengiriman</button><br />
+    <button onclick="location.href='checkout.html'">Laporan Pemesanan</button><br />
+    <button onclick="alert('Fitur History Transaksi belum diimplementasikan')">History Transaksi</button><br />
+    <button onclick="location.href='login.html'">Logout</button>
+  </div>
+
+  <script>
+    const greetingEl = document.getElementById("greeting");
+    const jam = new Date().getHours();
+    let greet;
+    if (jam < 12) greet = "Selamat Pagi ☀️";
+    else if (jam < 17) greet = "Selamat Siang 🌤️";
+    else greet = "Selamat Sore 🌙";
+    greetingEl.textContent = greet;
+  </script>
+</body>
+</html>

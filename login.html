@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page</title>
+  <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="container">
+    <form id="loginForm">
+      <h1>Login</h1>
+
+      <div class="email">
+        <label for="email">Email</label><br />
+        <input type="email" id="email" placeholder="Masukkan Email..." required />
+        <div id="emailError"></div>
+      </div>
+
+      <div class="pw">
+        <label for="password">Password</label><br />
+        <input type="password" id="password" placeholder="Masukkan Password..." required />
+        <div id="passwordError"></div>
+      </div>
+
+      <a type="button" id="lupaPwBtn">Lupa Password</a><br>
+      <button type="submit" class="login">Login</button><br />
+      <button type="button" id="daftarBtn">Daftar</button>
+    </form>
+  </div>
+
+  <div id="modalLupaPw" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeLupaPw">&times;</span>
+      <h2>Lupa Password</h2>
+      <p>Silakan hubungi admin untuk reset password Anda.</p>
+    </div>
+  </div>
+
+  <div id="modalDaftar" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeDaftar">&times;</span>
+      <h2>Form Pendaftaran</h2>
+      <p>Silakan isi data pendaftaran Anda.</p>
+      <form id="registerForm">
+        <input type="text" id="name" placeholder="Nama Lengkap" /><br />
+        <input type="email" id="regEmail" placeholder="Email" /><br />
+        <input type="password" id="regPassword" placeholder="Password" /><br />
+        <button type="submit">Daftar</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

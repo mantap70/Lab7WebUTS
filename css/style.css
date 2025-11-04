@@ -1,0 +1,250 @@
+/*Universal*/
+body {
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    background: linear-gradient(blueviolet, magenta);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin: 190px 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/*Login Page*/
+#container {
+    width: 350px;
+    height: 350px;
+    text-align: center;
+    border: 2px solid white;
+    padding: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+#container label {
+    font-size: 11px;
+}
+#container input {
+    width: 175px;
+    height: 20px;
+    background-color: transparent;
+    border: 1px solid cyan;
+    padding: 2px;
+    font-size: 10px;
+    color: #fff;
+    border-radius: 2px;
+}
+#container input::placeholder {
+    color: #d2d2d2;
+}
+#container a {
+    font-size: 10px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+}
+#container button {
+    width: 175px;
+    height: 30px;
+    background-color: blue;
+    border: 2px solid yellow;
+    margin-bottom: 10px;
+    border-radius: 5px; 
+    transition: 0.3s;
+}
+#container button:hover {
+    background-color: aqua;
+    border: 2px solid greenyellow;
+}
+#container h1 {
+    margin-bottom: 20px;
+    padding: 0;
+}
+#lupaPwBtn {
+    cursor: pointer;
+}
+
+
+/*Modal Box Styling*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Isi modal */
+.modal-content {
+    background-color: #3c1361;
+    margin: 10% auto;
+    padding: 20px;
+    border: 2px solid cyan;
+    width: 300px;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.4);
+}
+
+/* Tombol close (X) */
+.close {
+    color: #fff;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close:hover {
+    color: red;
+}
+
+/* Input dan tombol dalam modal */
+.modal-content input {
+    width: 90%;
+    height: 25px;
+    margin: 8px 0;
+    background-color: transparent;
+    border: 1px solid cyan;
+    color: white;
+    border-radius: 3px;
+    padding: 3px;
+    font-size: 12px;
+}
+
+.modal-content button {
+    width: 100px;
+    height: 30px;
+    background-color: blue;
+    border: 2px solid yellow;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+.modal-content button:hover {
+    background-color: aqua;
+    border-color: greenyellow;
+    color: black;
+}
+
+/*Stok*/
+#containerStok {
+    text-align: center;
+    border: 2px solid white;
+    padding: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 700px;
+}
+#containerStok input {
+    width: 175px;
+    height: 20px;
+    background-color: transparent;
+    border: 1px solid cyan;
+    padding: 2px;
+    font-size: 10px;
+    color: #fff;
+    border-radius: 2px;
+}
+#containerStok input::placeholder {
+    color: #d2d2d2;
+}
+#containerStok button {
+    width: 175px;
+    height: 30px;
+    background-color: blue;
+    border: 2px solid yellow;
+    margin-top: 10px;
+    border-radius: 5px; 
+    transition: 0.3s;
+}
+#containerStok button:hover {
+    background-color: aqua;
+    border: 2px solid greenyellow;
+}
+#containerStok tr td img {
+    width: 100px;
+    padding: 10px 10px;
+    border-radius: 15px;
+}
+
+/*Check*/
+#containerCheck {
+    text-align: center;
+    border: 2px solid white;
+    padding: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+#containerCheck input {
+    width: 175px;
+    height: 20px;
+    background-color: transparent;
+    border: 1px solid cyan;
+    padding: 2px;
+    font-size: 10px;
+    color: #fff;
+    border-radius: 2px;
+}
+#containerCheck input::placeholder {
+    color: #d2d2d2;
+}
+#containerCheck button {
+    width: 175px;
+    height: 30px;
+    background-color: blue;
+    border: 2px solid yellow;
+    margin-top: 10px;
+    border-radius: 5px; 
+    transition: 0.3s;
+}
+#containerCheck button:hover {
+    background-color: aqua;
+    border: 2px solid greenyellow;
+}
+
+/*Track*/
+#containerTrack {
+    text-align: center;
+    border: 2px solid white;
+    padding: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+#containerTrack input {
+    width: 175px;
+    height: 20px;
+    background-color: transparent;
+    border: 1px solid cyan;
+    padding: 2px;
+    font-size: 10px;
+    color: #fff;
+    border-radius: 2px;
+}
+#containerTrack input::placeholder {
+    color: #d2d2d2;
+}
+#containerTrack button {
+    width: 175px;
+    height: 30px;
+    background-color: blue;
+    border: 2px solid yellow;
+    margin-top: 10px;
+    border-radius: 5px; 
+    transition: 0.3s;
+}
+#containerTrack button:hover {
+    background-color: aqua;
+    border: 2px solid greenyellow;
+}
+#containerTrack ul {
+    list-style-type: none;
+}
